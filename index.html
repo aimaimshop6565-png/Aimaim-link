@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ร้านอิมอิม - Link in Bio</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts: Mali and Prompt for a cute, bubbly Thai style -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mali:ital,wght@0,400;0,600;0,700;1,400&family=Prompt:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            font-family: 'Prompt', 'Mali', sans-serif;
+            background: linear-gradient(135deg, #ffd1dc 0%, #ffc0cb 35%, #e6e6fa 70%, #d8bfd8 100%);
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        .font-cute {
+            font-family: 'Mali', cursive;
+        }
+
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Floating Clouds Animation */
+        @keyframes floatSlow {
+            0% { transform: translateY(0px) translateX(0px); }
+            50% { transform: translateY(-15px) translateX(10px); }
+            100% { transform: translateY(0px) translateX(0px); }
+        }
+
+        @keyframes floatFast {
+            0% { transform: translateY(0px) translateX(0px); }
+            50% { transform: translateY(-20px) translateX(-15px); }
+            100% { transform: translateY(0px) translateX(0px); }
+        }
+
+        .cloud-1 {
+            animation: floatSlow 7s ease-in-out infinite;
+        }
+
+        .cloud-2 {
+            animation: floatFast 5s ease-in-out infinite;
+        }
+
+        /* Bouncing / Glowing Button Effect */
+        .cute-button {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 10px 25px -5px rgba(255, 105, 180, 0.3), 0 8px 10px -6px rgba(255, 105, 180, 0.2);
+        }
+
+        .cute-button:hover {
+            transform: translateY(-4px) scale(1.02);
+            box-shadow: 0 15px 30px -5px rgba(255, 105, 180, 0.5), 0 10px 15px -5px rgba(255, 105, 180, 0.3);
+        }
+
+        .cute-button:active {
+            transform: translateY(1px) scale(0.98);
+        }
+
+        /* Profile Glow */
+        .profile-glow {
+            box-shadow: 0 0 25px rgba(255, 255, 255, 0.8), 0 0 40px rgba(255, 182, 193, 0.6);
+        }
+
+        /* Glassmorphism Card */
+        .glass-card {
+            background: rgba(255, 255, 255, 0.75);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 2px solid rgba(255, 255, 255, 0.9);
+        }
+    </style>
+</head>
+<body class="flex flex-col items-center justify-center p-4 sm:p-6 relative">
+
+    <!-- Background Decorative Floating Clouds -->
+    <div class="absolute top-10 left-4 sm:left-12 opacity-60 cloud-1 pointer-events-none text-white text-5xl sm:text-6xl drop-shadow-md">
+        ☁️
+    </div>
+    <div class="absolute top-32 right-6 sm:right-16 opacity-70 cloud-2 pointer-events-none text-white text-6xl sm:text-7xl drop-shadow-md">
+        ☁️
+    </div>
+    <div class="absolute bottom-10 left-10 opacity-50 cloud-2 pointer-events-none text-white text-6xl sm:text-8xl drop-shadow-md">
+        ☁️
+    </div>
+    <div class="absolute bottom-20 right-8 opacity-60 cloud-1 pointer-events-none text-white text-5xl sm:text-7xl drop-shadow-md">
+        ☁️
+    </div>
+
+    <!-- Main Container Card -->
+    <div class="w-full max-w-md glass-card rounded-3xl p-6 sm:p-8 shadow-2xl relative z-10 my-6 flex flex-col items-center">
+
+        <!-- Profile Image / Mascot Area -->
+        <div class="relative mb-4">
+            <div class="w-28 h-28 sm:w-32 sm:h-32 rounded-full p-1 bg-gradient-to-tr from-pink-400 via-purple-300 to-pink-200 profile-glow">
+                <img src="https://placehold.co/200x200/ffb6c1/ffffff?text=ImIm" alt="ร้านอิมอิม" class="w-full h-full object-cover rounded-full bg-pink-100" onerror="this.src='https://placehold.co/200x200/ffb6c1/ffffff?text=ImIm'">
+            </div>
+            <!-- Cute Sparkle Badge -->
+            <span class="absolute bottom-1 right-1 bg-pink-500 text-white text-xs px-2.5 py-1 rounded-full font-bold shadow-md animate-bounce">
+                ✨ Cute
+            </span>
+        </div>
+
+        <!-- Header Title -->
+        <h1 class="font-cute text-3xl sm:text-4xl font-extrabold text-pink-600 tracking-wide text-center drop-shadow-sm mb-1">
+            ร้านอิมอิม
+        </h1>
+        <p class="text-xs sm:text-sm text-purple-600 font-medium tracking-wide mb-6 text-center">
+            ยินดีต้อนรับลูกค้าน่ารักทุกคนนะคะ 💖✨
+        </p>
+
+        <!-- Links Stack -->
+        <div class="w-full flex flex-col gap-4">
+
+            <!-- Button 1: รีวิวการสั่งซื้อ -->
+            <a href="https://drive.google.com/drive/folders/17WRrzTxWZ2WN_WEV6ngisImezqlPDxLg" target="_blank" rel="noopener noreferrer" 
+               class="cute-button flex items-center justify-between w-full p-4 rounded-2xl bg-gradient-to-r from-pink-200 to-pink-300 hover:from-pink-300 hover:to-pink-400 text-pink-900 font-semibold border border-white/80 group">
+                <div class="flex items-center space-x-3.5">
+                    <div class="w-10 h-10 rounded-xl bg-white/80 flex items-center justify-center text-pink-600 shadow-sm group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-folder-open text-lg"></i>
+                    </div>
+                    <span class="text-sm sm:text-base font-cute font-bold tracking-wide">รีวิวการสั่งซื้อลูกค้าร้านอิมอิม</span>
+                </div>
+                <i class="fa-solid fa-chevron-right text-pink-500 text-sm group-hover:translate-x-1 transition-transform"></i>
+            </a>
+
+            <!-- Button 2: Line -->
+            <a href="https://line.me/ti/p/pun_K5qGYb" target="_blank" rel="noopener noreferrer" 
+               class="cute-button flex items-center justify-between w-full p-4 rounded-2xl bg-gradient-to-r from-emerald-100 to-green-200 hover:from-emerald-200 hover:to-green-300 text-emerald-900 font-semibold border border-white/80 group">
+                <div class="flex items-center space-x-3.5">
+                    <div class="w-10 h-10 rounded-xl bg-white/80 flex items-center justify-center text-emerald-600 shadow-sm group-hover:scale-110 transition-transform">
+                        <i class="fa-brands fa-line text-xl"></i>
+                    </div>
+                    <span class="text-sm sm:text-base font-cute font-bold tracking-wide">ไลน์ ✿สำหรับสั่งซื้อสินค้า ✿</span>
+                </div>
+                <i class="fa-solid fa-chevron-right text-emerald-500 text-sm group-hover:translate-x-1 transition-transform"></i>
+            </a>
+
+            <!-- Button 3: Instagram -->
+            <a href="https://www.instagram.com/aix.muxy?dlrf=cmlnbzBqeWczdzZi" target="_blank" rel="noopener noreferrer" 
+               class="cute-button flex items-center justify-between w-full p-4 rounded-2xl bg-gradient-to-r from-pink-100 via-purple-100 to-pink-200 hover:from-pink-200 hover:to-purple-200 text-purple-900 font-semibold border border-white/80 group">
+                <div class="flex items-center space-x-3.5">
+                    <div class="w-10 h-10 rounded-xl bg-white/80 flex items-center justify-center text-pink-600 shadow-sm group-hover:scale-110 transition-transform">
+                        <i class="fa-brands fa-instagram text-xl"></i>
+                    </div>
+                    <span class="text-sm sm:text-base font-cute font-bold tracking-wide">IG : aix.muxy</span>
+                </div>
+                <i class="fa-solid fa-chevron-right text-purple-500 text-sm group-hover:translate-x-1 transition-transform"></i>
+            </a>
+
+            <!-- Button 4: Facebook -->
+            <a href="https://www.facebook.com/share/1E6uhZV1BX/" target="_blank" rel="noopener noreferrer" 
+               class="cute-button flex items-center justify-between w-full p-4 rounded-2xl bg-gradient-to-r from-blue-100 to-indigo-200 hover:from-blue-200 hover:to-indigo-300 text-blue-900 font-semibold border border-white/80 group">
+                <div class="flex items-center space-x-3.5">
+                    <div class="w-10 h-10 rounded-xl bg-white/80 flex items-center justify-center text-blue-600 shadow-sm group-hover:scale-110 transition-transform">
+                        <i class="fa-brands fa-facebook text-xl"></i>
+                    </div>
+                    <span class="text-sm sm:text-base font-cute font-bold tracking-wide">Facebook Page</span>
+                </div>
+                <i class="fa-solid fa-chevron-right text-blue-500 text-sm group-hover:translate-x-1 transition-transform"></i>
+            </a>
+
+        </div>
+
+        <!-- Footer Note -->
+        <div class="mt-8 text-center text-xs text-pink-500 font-medium">
+            <span>© 2026 ร้านอิมอิม • All Rights Reserved 🌸</span>
+        </div>
+
+    </div>
+
+</body>
+</html>
